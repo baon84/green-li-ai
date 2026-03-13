@@ -6,7 +6,7 @@ import numpy as np
 st.set_page_config(page_title="Green Bin AI", layout="centered")
 
 st.title("🌱 Green Bin AI")
-st.write("Deteksi sampah pintar untuk lingkungan Sekolah yang lebih hijau.")
+st.write("AI-Based Waste Detection System.")
 
 # Load Model
 @st.cache_resource
@@ -17,7 +17,7 @@ model = load_model()
 class_names = [line.strip() for line in open("labels.txt", "r").readlines()]
 
 # Input Kamera di HP/Laptop
-img_file = st.camera_input("Ambil Foto Sampah")
+img_file = st.camera_input("Take a photo of the trash")
 
 if img_file:
     image = Image.open(img_file).convert("RGB")
@@ -39,6 +39,7 @@ if img_file:
     st.success(f"Terdeteksi: **{label[2:]}**")
 
     st.write(f"Keyakinan: {score*100:.1f}%")
+
 
 
 
