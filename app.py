@@ -3,9 +3,9 @@ import tensorflow as tf
 from PIL import Image, ImageOps
 import numpy as np
 
-st.set_page_config(page_title="Green Li AI", layout="centered")
+st.set_page_config(page_title="Green Bin AI", layout="centered")
 
-st.title("🌱 Green Li AI")
+st.title("🌱 Green Bin AI")
 st.write("Deteksi sampah pintar untuk lingkungan SMA NEGERI 4 AMBON yang lebih hijau.")
 
 # Load Model
@@ -39,4 +39,5 @@ if img_file:
     st.success(f"Terdeteksi: **{label[2:]}**")
 
     st.write(f"Keyakinan: {score*100:.1f}%")
+
 
