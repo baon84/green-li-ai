@@ -38,7 +38,8 @@ if img_file:
     # Tampilan Hasil
     st.success(f"Terdeteksi: **{label[2:]}**")
 
-    st.write(f"Keyakinan: {score*100:.1f}%")
+    st.write(f"Percent : {score*100:.1f}%")
+
 
 
 
