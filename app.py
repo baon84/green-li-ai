@@ -6,7 +6,7 @@ import numpy as np
 st.set_page_config(page_title="Green Li AI", layout="centered")
 
 st.title("🌱 Green Li AI")
-st.write("Deteksi sampah pintar untuk bumi yang lebih hijau.")
+st.write("Deteksi sampah pintar untuk bumi Maluku yang lebih hijau.")
 
 # Load Model
 @st.cache_resource
@@ -37,4 +37,5 @@ if img_file:
 
     # Tampilan Hasil
     st.success(f"Terdeteksi: **{label[2:]}**")
+
     st.write(f"Keyakinan: {score*100:.1f}%")
